@@ -1,30 +1,49 @@
 <script lang="ts">
-    export let name: string;
 </script>
 
 <main>
-    <h1>Hello {name}!</h1>
-    <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-
+  <h1>Spotizer</h1>
+  <p class="description">
+    Listen to music together even if your friends are using a different
+    streaming platform!
+  </p>
+  <div>
+    <button class="button-spotify"> Login to Spotify </button>
+    <button class="button-deezer"> Login to Deezer </button>
+  </div>
 </main>
 
 <style lang="scss">
-  $color: green;
+  $spotify-color: #05C95B;
+  $titles-size: 4rem;
 
   main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+    background-color: #020102;
+    height: 100%;
+    color: #fff;
   }
 
   h1 {
-    color: $color;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+    color: $spotify-color;
+    font-size: $titles-size;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0;
   }
 
+  .description {
+    margin-top: 0.75rem;
+    font-size: 1.4rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.30rem;
+  }
+  .button-spotify {
+    background-image: linear-gradient(to right, $spotify-color, #30db94);
+  }
   @media (min-width: 640px) {
     main {
       max-width: none;
